@@ -1,7 +1,9 @@
-const xxxx = document.querySelector("div.yyyy:first-child h1");
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
 
-function handleTitleClick() {
-  xxxx.classList.toggle("clickedvv");
+function onLoginSubmit(event) {
+  event.preventDefault();
+  console.log(loginInput.value);
 }
 
-xxxx.addEventListener("click", handleTitleClick);
+loginForm.addEventListener("submit", onLoginSubmit);
